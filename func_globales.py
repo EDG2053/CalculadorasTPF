@@ -10,15 +10,20 @@ def numero_valido(num):
 
         retorna un int si el numero no tiene decimales(.0) y float si los tiene(.3)
     """
+    loop=True
+    while loop:
+        try:
+            float(num)
+        except ValueError:
+            num=input("Error, tiene que ingresar un numero: ")
+        else:
+            num=float(num)
+            
+            if num%1 == 0:
+                num=int(num)
 
-    try:
-        float(num)
-    except ValueError:
-        num=input("Error, tiene que ingresar un numero: ")
-    else:
-        num=float(num)
-        if num%1 == 0:
-            num=int(num)
+            loop=False
+
     return num
 
 
