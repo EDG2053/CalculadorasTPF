@@ -1,7 +1,7 @@
 from func_globales import numero_valido as num_val
 from clasica import Calculadora_Clasica 
 from fraccion import Calculadora_fracciones
-import conversion
+from conversion import Calculadora_conversiones
 
 print("""
     Para una mejor experiencia le sugerimos 
