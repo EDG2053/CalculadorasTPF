@@ -2,7 +2,8 @@ from func_globales import numero_valido, operador_valido, operacion
 
 def UI_clasica(num1="", oper="", num2="", result="")->None:
 
-    print(f"""        Casio
+    print(f"""
+        Casio
         --- Calculadora CLASICA ---       
           {num1} {oper} {num2}              
                     = {result}
@@ -24,7 +25,7 @@ def Calculadora_Clasica():
     num1= input("Ingrese un numero: ")
     num1= numero_valido(num1)
 
-    operador=input("ingrese el operador: ")
+    operador=input("Ingrese el operador: ")
     operador= operador_valido(operador)
 
     while operador != "=":
@@ -37,7 +38,8 @@ def Calculadora_Clasica():
         UI_clasica(num1, operador, num2, resultado)
         
         num1=resultado
-        operador=input("ingrese el operador: ")
+        operador=input("Ingrese el operador: ")
         operador= operador_valido(operador)
     
-        
+    
+    UI_clasica(num1, "", "", num1)

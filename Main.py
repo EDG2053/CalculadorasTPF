@@ -1,16 +1,20 @@
 from func_globales import numero_valido as num_val
-import clasica 
-import fraccion
+from clasica import Calculadora_Clasica 
+from fraccion import Calculadora_fracciones
 import conversion
 
 print("""
-    ---- MENU CALCULADORAS ----
+    Para una mejor experiencia le sugerimos 
+        expandir el tamaño de la terminal
+    
+        ---- MENU CALCULADORAS ----
 
-            1 - Clasica
-            2 - Fracciones 
-            3 - COnversiones
-            4 - Salir / off
+                1 - Clasica
+                2 - Fracciones 
+                3 - COnversiones
+                4 - Salir / off
 
     """)
-opcion= int( input("     Ingrese el numero de calculadora:  ") )
+opcion= num_val( input("     Ingrese el numero de calculadora:  ") )
+
 
