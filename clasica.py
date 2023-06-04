@@ -38,8 +38,13 @@ def Calculadora_Clasica():
         UI_clasica(num1, operador, num2, resultado)
         
         num1=resultado
+
+        print(f"Esta operando con el numero: {num1}")
+        
         operador=input("Ingrese el operador: ")
         operador= operador_valido(operador)
     
     
     UI_clasica(num1, "", "", num1)
+
+Calculadora_Clasica()
