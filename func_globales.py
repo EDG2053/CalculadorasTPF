@@ -11,7 +11,7 @@ def numero_valido(num):
         retorna un int si el numero no tiene decimales(.0) y float si los tiene(.3)
     """
     loop=True
-    while loop:
+    while loop is True:
         try:
             float(num)
         except ValueError:
@@ -29,7 +29,7 @@ def numero_valido(num):
 
 def operador_valido(operador):
     """
-        Verifica si el operador es valido ( si es +, -, x, / )
+        Verifica si el operador es valido ( +, -, x, / o = )
         Si no es valido lo vuelve a pedir hasta que lo sea
 
         retorna el operador
@@ -54,7 +54,7 @@ def operador_valido(operador):
 
 def operacion(num1, operador, num2):
     """
-        Realiza una operacion segun el operador que reciba( +, -, x, / )
+        Realiza una operacion segun el operador que reciba ( +, -, x, / )
         Retorna el resultado
 
         Usar solo luego de validar los numeros y operadores
@@ -79,4 +79,3 @@ def operacion(num1, operador, num2):
 #
 # ---------FIN Func. de Realizar operaciones ---------
 #
-

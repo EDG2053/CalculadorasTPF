@@ -30,8 +30,14 @@ def Calculadora_Clasica():
 
     while operador != "=":
 
-        num2= input("Ingrese otro numero: ")
+        num2= input("Ingrese el segundo numero: ")
         num2= numero_valido(num2)
+        division_cero= num2==0 and operador=="/"
+
+        while division_cero:
+            print("Error, division por 0")
+            num2= input("Reingrese el segundo numero: ")
+            num2= numero_valido(num2)
 
         resultado= operacion(num1, operador, num2)
     
