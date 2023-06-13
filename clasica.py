@@ -17,7 +17,6 @@ def UI_clasica(num1="", oper="", num2="", result="")->None:
          |.| |0|
     """)
 
-
 def Calculadora_Clasica():
     resultado=0
     UI_clasica()
@@ -32,9 +31,8 @@ def Calculadora_Clasica():
 
         num2= input("Ingrese el segundo numero: ")
         num2= numero_valido(num2)
-        division_cero= num2==0 and operador=="/"
 
-        while division_cero:
+        while num2==0 and operador=="/":
             print("Error, division por 0")
             num2= input("Reingrese el segundo numero: ")
             num2= numero_valido(num2)
@@ -49,6 +47,5 @@ def Calculadora_Clasica():
         
         operador=input("Ingrese el operador: ")
         operador= operador_valido(operador)
-    
     
     UI_clasica(num1, "", "", num1)

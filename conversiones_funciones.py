@@ -1,9 +1,13 @@
+from func_globales import numero_valido
+
 #CONVERSIONES (3)
+
 def a_octal():
     
     #DECIMAL A OCTAL
     print("DECIMAL ---> OCTAL")
-    num1 = int(input("ingrese decimal: "))
+    num1 = input("ingrese decimal: ")
+    num1 = numero_valido(num1)
     octal = "" # Asignar valor (UnboundLocalError).
     
     while num1 >= 8: # Verificacion.
@@ -19,7 +23,9 @@ def a_binario():
     
     #DECIMAL A BINARIO
     print("DECIMAL ---> BINARIO")
-    num1 = int(input("Ingrese decimal: "))
+    num1 = input("Ingrese decimal: ")
+    num1 = numero_valido(num1)
+
     binario = "" # Asignar valor (UnboundLocalError).
     
     while num1 >= 2: # Verificacion.
@@ -35,7 +41,10 @@ def a_hexa():
     valores_hexa = {0: "0", 1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7", 
                     8: "8", 9: "9", 10: "A", 11: "B", 12: "C", 13: "D", 14: "E", 15: "F"}
     print("DECIMAL ---> HEXA")
-    num1 = int(input("ingrese decimal: ")) 
+
+    num1 = input("ingrese decimal: ")
+    num1 = numero_valido(num1)
+    
     restos = [] # Lista para restos 
     hexadecimales = "" # Guardar valores hexa.
     while num1 >= 16:
@@ -56,4 +65,3 @@ def a_hexa():
         
     
     print(num_hexa)
-a_hexa()  

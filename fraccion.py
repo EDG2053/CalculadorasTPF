@@ -41,20 +41,17 @@ def simplificado(tupla):
         grande=numerador
         chico=denominador
 
-    #cociente= grande//chico
     resto= grande%chico
 
-    #  grande== chico*cociente + resto
     divisor=chico
 
     nuevo_grande=chico
     nuevo_chico=resto
 
     while resto!=0:
-        #cociente= nuevo_grande//nuevo_chico
+
         resto= nuevo_grande%nuevo_chico
         
-    # nuevo_grande == nuevo_chico*cociente + resto
         divisor=nuevo_chico
 
         nuevo_grande=nuevo_chico
