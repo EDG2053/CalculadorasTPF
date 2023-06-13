@@ -52,5 +52,3 @@ def Calculadora_Clasica():
     
     
     UI_clasica(num1, "", "", num1)
-
-Calculadora_Clasica()

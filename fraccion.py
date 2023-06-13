@@ -222,5 +222,3 @@ def Calculadora_fracciones():
 
     UI_fraccion(fracc1, " ", ("", ""), simplificado(fracc1))
 
-
-Calculadora_fracciones()
