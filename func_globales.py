@@ -39,8 +39,8 @@ def operador_valido(operador):
     operadores=["+","-","x", "/","="]        
     
     while not (operador in operadores):
-        print("El operador debe ser |+|, |-|, |x|(equis), |/| o |=| ")
-        operador=input("\n Reingrese operador: ")# \n hace un salto de linea
+        print("El operador debe ser |+|, |-|, |x|(equis), |/| o |=| \n")
+        operador=input(" Reingrese operador: ")# \n hace un salto de linea
 
     return operador
 
