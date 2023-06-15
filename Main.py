@@ -17,6 +17,12 @@ print("""
     """)
 opcion= num_val( input("     Ingrese el numero de calculadora:  ") )
 
+
+while opcion<=0 or opcion>=5:
+    print("\n    Opción no válida, ingrese nuevamente. \n")
+    opcion= num_val( input("     Ingrese el numero de calculadora:  ") )
+
+
 while opcion !=4:
     if opcion == 1:
         Calculadora_Clasica()
@@ -38,3 +44,8 @@ while opcion !=4:
 
     opcion= num_val( input("     Ingrese el numero de calculadora:  ") )
     
+
+
+print("""
+        ----- OFF -----
+        """)
