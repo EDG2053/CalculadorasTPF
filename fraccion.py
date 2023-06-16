@@ -21,7 +21,7 @@ def pedir_fracc()->tuple:
             parte es para cambiar el mensaje de error, debe ser: numerador o denominador 
         """
         
-        error_es_cero={ "numerador": "Ingrese un numerador diferente, no vaya a sumar un 0 señor",
+        error_es_cero={ "numerador": "Error, esta sumando 0",
                        "denominador": "Error, division por 0"}
 
         error_es_float={"numerador": "Ingrese un numerador diferente, debe ser entero",
@@ -31,24 +31,24 @@ def pedir_fracc()->tuple:
         while nro_no_valido:
 
             if nro==0:
-                print(error_es_cero[parte])
-                nro= numero_valido( input(f"Reingrese el {parte}: \n") )
+                print(f"\n {error_es_cero[parte]} \n")
+                nro= numero_valido( input(f"Reingrese el {parte}: ") )
             
             elif type(nro) == float:
-                print(error_es_float[parte])
-                nro= numero_valido( input(f"Reingrese el {parte}: \n") )
+                print(f"\n {error_es_float[parte]} \n")
+                nro= numero_valido( input(f"Reingrese el {parte}: ") )
             
             else:
                 nro_no_valido= False
         
         return nro
 
-    numerador= input("Ingrese el numerador: \n")
+    numerador= input("Ingrese el numerador: ")
     numerador= numero_valido(numerador)
 
     numerador= es_cero_float(numerador, "numerador")
             
-    denominador= input("Ingrese el denominador: \n")
+    denominador= input("Ingrese el denominador: ")
     denominador= numero_valido(denominador)
         
     denominador= es_cero_float(denominador, "denominador")
@@ -68,9 +68,12 @@ def simplificado(fracc):
         grande=numerador
         chico=denominador
 
-    resto= grande%chico
-
-    divisor=chico
+    if chico !=0:
+        resto= grande%chico 
+        divisor=chico 
+    else:
+        resto=0
+        divisor=grande
 
     nuevo_grande=chico
     nuevo_chico=resto
